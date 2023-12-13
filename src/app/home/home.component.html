@@ -1,0 +1,134 @@
+<section  id="home">
+  <div class="shadow sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home">
+            <img src="assets/logo.jpg" alt="logo" width="60" height="60">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item fs-6 mx-3 ">
+                <a class="nav-link text-dark active" aria-current="page" (click)="activeMenu($event)" href="#home">Home</a>
+              </li>
+              <!-- <li class="nav-item fs-6 mx-3">
+                <a class="nav-link text-dark" (click)="activeMenu($event)" href="javscript:void(0)" [routerLink]="['/map']" routerLinkActive="active" >Map</a>
+              </li> -->
+              <li class="nav-item fs-6 mx-3">
+                <a class="nav-link text-dark" (click)="activeMenu($event)" href="#mobileapp">Mobile App</a>
+              </li>
+              <li class="nav-item fs-6 mx-3">
+                <a class="nav-link text-dark" (click)="activeMenu($event)" href="#aboutus">About Us</a>
+              </li>
+              <li class="nav-item fs-6 mx-3">
+                <a class="nav-link text-dark" (click)="activeMenu($event)" href="#contactus">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="hero-section vh-100 d-flex align-items-center mt-0">
+    <div class="container">
+      <h1 class="text-dark fw-bold text-white title-text">Changing the norm.</h1>
+      <h1 class="text-dark fw-bold title-text success-text">Charging the future.</h1>
+      <a class="btn text-decoration-none btn-bd-primary px-4 rounded-0 fw-bold fs-4 py-3 my-5" href="#mobileapp">DOWNLOAD THE APP</a>
+    </div>
+  </div>
+  <div class="container text-center py-5">
+    <i class="fa-regular fa-map text-center fw-bold title-text"></i>
+    <h1 class="text-center mt-3">The VoltMate Map</h1>
+    <hr>
+    <p class="fs-5">Find every charging station in Dubai with VoltMate’s live-updated map.</p>
+    <p class="fs-6 fw-semibold">You'll find stations from the following networks: ChargePoint, Blink (now Car Charging), Tesla, SemaCharge, Sun Country Highway, Electric Circuit, Flo, OPConnect, Shell Recharge, Aerovironment, and more.</p>
+    <div class="row mb-5">
+      <div class="col-md-4 mt-5">
+        <i class="fa-solid fa-earth-asia fs-1"></i>
+        <h3 class="my-3">United Arab Emirates Coverage</h3>
+        <p class="fw-medium">The Map includes all charging stations in United Arab Emirates including major cities like Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, Umm Al Quwain etc.</p>
+      </div>
+      <div class="col-md-4 mt-5">
+        <i class="fa-solid fa-street-view fs-1"></i>
+        <h3 class="my-3">Trip planner</h3>
+        <p class="fw-medium">Plan custom trips in order to recharge your electric car at the ideal stops.</p>
+      </div>
+      <div class="col-md-4 mt-5">
+        <i class="fa-solid fa-filter fs-1"></i>
+        <h3 class="my-3">Powerful filters</h3>
+        <p class="fw-medium">Easily configure the filters to display the connectors that are compatible with your vehicle (J1772, CHAdeMO, J1772 Combo, Tesla).</p>
+      </div>
+    </div>
+    <hr>
+    <h5 class="my-5">The VoltMate Map also exists in mobile version, allowing you to find charging stations near you wherever you are. Plan your trip right now from your browser or download the free VoltMate app.</h5>
+    <div class="mt-5 col-md-9 mx-auto text-center">
+      <!-- <button class="btn btn-bd-primary px-4 rounded-0 fw-bold fs-5 py-3">FIND CHARGING STATION</button> -->
+      <a class="btn text-decoration-none btn-bd-primary px-4 rounded-0 fw-bold fs-5 py-3" href="#mobileapp">DOWNLOAD THE APP</a>
+    </div>
+  </div>
+  <div class="w-100 d-none" id="arrow-btn">
+    <a class="btn btn-success arrow-btn" href="#home">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+</section>
+
+<section id="mobileapp">
+  <app-mobileapp></app-mobileapp>
+</section>
+
+<section id="aboutus">
+  <app-aboutus></app-aboutus>
+</section>
+
+<section>
+  <div class="container">
+    <h1 class="text-title text-center mt-5">Stay Tuned</h1>
+    <p class="text-center fs-4">Subscribe to our newsletter and stay updated on VotMate news!</p>
+    <div class="row height d-flex justify-content-center align-items-center mt-4">
+      <div class="col-md-8">
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control" placeholder="Email">
+          <!-- <input type="text" class="form-control" placeholder="Have a question? Ask Now"> -->
+          <button class="btn fw-bold rounded-0 btn-bd-primary px-4">Submit</button>
+        </div>
+      </div>
+    </div>
+    <h5 class="text-center mt-5">FAQ</h5>
+    <h2 class="text-center">Got questions on VoltMate?</h2>
+    <section class="accordion mt-5">
+      <div class="tab">
+        <input type="checkbox" name="accordion-1" id="cb1" checked>
+        <label for="cb1" class="tab__label">How do I track the charging station?</label>
+        <div class="tab__content">
+          <p class="text-start">You can track the charging station using the VoltMate mobile app. It provides real-time updates on charging progress, ensuring you stay informed regardless of where you are. </p>
+        </div>
+      </div>
+      <div class="tab">
+        <input type="checkbox" name="accordion-1" id="cb2" checked>
+        <label for="cb2" class="tab__label">How many EV charging stations are in UAE ?</label>
+        <div class="tab__content">
+          <p class="text-start">Presently, Statiq has 7000+ charging stations across 63+ cities in UAE.</p>
+        </div>
+      </div>
+    </section>
+    <a class="btn btn-bd-primary text-decoration-none px-4 rounded-0 fw-bold fs-5 py-3 mt-5" href="#contactus">Get More Questions ?</a>
+  </div>
+</section>
+
+<section id="contactus">
+  <app-contactus></app-contactus>
+</section>
+
+<section>
+  <div class="bg-dark text-center py-4 text-white">
+    &#169; Copyright VoltMate. All Rights Reserved
+  </div>
+</section>

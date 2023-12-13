@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+select,
+a,
+label,
+input,
+button,
+textarea {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn-bd-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: white !important;
+  --bs-btn-bg: #18d1ae !important;
+  --bs-btn-border-color: #18d1ae;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #1c8f7a;
+  --bs-btn-hover-border-color: #1c8f7a;
+  --bs-btn-focus-shadow-rgb: #18d1ae;
+  --bs-btn-active-color: #eee;
+  --bs-btn-active-bg: #1c8f7a;
+  --bs-btn-active-border-color: #1c8f7a;
+}

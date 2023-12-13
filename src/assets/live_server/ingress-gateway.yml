@@ -1,0 +1,131 @@
+# ingress route based access
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-gateway
+  annotations:
+    kubernetes.io/ingress.class: public
+    nginx.ingress.kubernetes.io/use-regix: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  #- host: tracker.io
+  # - host: www.hiringbell.in
+  - host: www.emstum.com
+    http:
+      paths:
+      - path: /bot/sb(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: apigateway-service
+            port:
+              number: 8090
+      - path: /bot/dn(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            # name: api-databuilder-service
+            name: apigateway-core-service
+            port:
+              number: 5001            
+
+---  
+
+# ingress direct access use this for subdomain also
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-gateway-direct
+  annotations:
+    kubernetes.io/ingress.class: public
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  # - host: bot.io
+  - host: www.emstum.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hiringbell-ui-service
+            port:
+              number: 8196                           
+
+  - host: www.voltmatehub.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: tracker-api-service
+            port:
+              number: 8080
+
+  - host: www.cyberzonetec.com
+  # - host: www.emstum.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: skillbi-service
+            port:
+              number: 8201              
+
+  - host: www.wisdomreadinghall.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wisdon-library-ui-service
+            port:
+              number: 8193            
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: wisdon-library-service
+            port:
+              number: 8192
+
+---              
+
+# ingress route based access
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-gateway-sites
+  annotations:
+    kubernetes.io/ingress.class: public
+    nginx.ingress.kubernetes.io/use-regix: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  # - host: www.bottomhalf.in
+  #   http:
+  #     paths:
+  #     - path: /
+  #       pathType: Prefix
+  #       backend:
+  #         service:
+  #           name: bottomhalf-service
+  #           port:
+  #             number: 8190  
+
+  - host: www.aamnatailor.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aamnaz-service
+            port:
+              number: 8191                       

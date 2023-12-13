@@ -1,0 +1,15 @@
+Ingress used: nginx-ingress
+Always use annotation for path base routing: ingress.kubernetes.io/rewrite-target: /
+
+
+apigateway-service             LoadBalancer   10.152.183.154   <pending>     8090:32671/TCP
+bottomhalf-service             LoadBalancer   10.152.183.48    <pending>     8190:30272/TCP
+configserver-service           NodePort       10.152.183.193   <none>        8083:30441/TCP
+aamnaz-service                 LoadBalancer   10.152.183.75    <pending>     8191:31137/TCP
+employee-performance-service   NodePort       10.152.183.74    <none>        8081:32185/TCP
+employee-filter-service        NodePort       10.152.183.180   <none>        8091:30626/TCP
+employee-project-service       NodePort       10.152.183.187   <none>        8085:31824/TCP
+tracker-api-service            LoadBalancer   10.152.183.247   <pending>     8080:32100/TCP
+api-databuilder-service        LoadBalancer   10.152.183.152   <pending>     5000:30644/TCP
+hiringbell-ui-service          LoadBalancer   10.152.183.234   <pending>     8182:31254/TCP
+wisdon-library-ui-service      NodePort       10.152.183.33    <none>        8193:31198/TCP

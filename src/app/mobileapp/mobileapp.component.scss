@@ -1,0 +1,37 @@
+.overlay-blur-green {
+  position: relative;
+  z-index: 100;
+  height: 70vh;
+  margin-top: -70px;
+  background: linear-gradient(to bottom, rgba(24, 209, 174, 0.12) 0%, rgba(22, 191, 157, 0.4) 0%, rgb(22, 191, 157) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bf18d1ae", endColorstr="#cc16bc9b", GradientType=0);
+}
+
+.app-hero-container {
+  margin-top: -20px;
+  background: url("../../assets/VoltMate-Mobile-App-Hero-IMG.jpg");
+  background-size: cover;
+  position: relative;
+  height: 70vh;
+  background-position: center right;
+}
+
+.arrow_box {
+  position: relative;
+  background: #18d1ae;
+  margin-bottom: 60px;
+}
+
+.btn-bd-white {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: #18d1ae !important;
+  --bs-btn-bg: white !important;
+  --bs-btn-border-color: white;
+  --bs-btn-hover-color: #222;
+  --bs-btn-hover-bg: #dedede;
+  --bs-btn-hover-border-color: #dedede;
+  --bs-btn-focus-shadow-rgb: #18d1ae;
+  --bs-btn-active-color: #eee;
+  --bs-btn-active-bg: #dedede;
+  --bs-btn-active-border-color: #dedede;
+}
